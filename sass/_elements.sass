@@ -1,0 +1,185 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+:root
+    --balck: #0E0E0E
+    --gray: #A0A0A0
+    --prime: #FFC148
+    --red: #FF4242
+
+$black: var(--balck)
+$prime: var(--prime)
+$gray: var(--gray)
+$red: var(--red)
+
+body
+    min-height: 100vh
+    font-size: 16px
+    color: white
+    background-color: $black
+    font-family: 'Montserrat', sans-serif
+
+    position: relative
+    z-index: 1
+
+.container
+    max-width: 1430px
+    width: 100%
+    margin: 0 auto
+    padding: 0 15px
+
+img
+    max-width: 100%
+
+a,
+button
+    color: white
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:hover
+        opacity: .7
+    &:active
+        opacity: 1
+        transform: scale(.98)
+
+.h2
+    margin-bottom: 10px
+
+ul
+    list-style: none
+
+.btn
+    display: inline-flex
+    font-weight: 500
+    color: $black
+    font-size: 16px
+    line-height: 19.5px
+    line-height: 100%
+    padding: 10px 14px
+    background-color: $prime
+    border-radius: 50px
+    text-align: center
+    &-outline
+        background-color: rgba(0, 0, 0, 0)
+        color: white
+        border: 2px solid $prime 
+
+.c-red 
+    color: $red !important
+
+
+.w-100
+    width: 100% !important
+
+.text-center
+    text-align: center !important
+
+.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .fx-js, body
+    display: flex !important
+
+.fx-col, body
+    flex-direction: column
+
+.fx
+    &-w
+        flex-wrap: wrap
+
+    &-as
+        align-items: flex-start
+
+    &-ac
+        align-items: center
+
+    &-js
+        justify-content: flex-start
+
+    &-jc
+        justify-content: center
+
+    &-jb
+        justify-content: space-between
+
+    &-ae
+        align-items: end
+
+section,.section
+    padding: 100px 0
+
+.form
+    gap: 8px
+    .submit
+        height: 43px
+        min-width: 64px
+        width: 64px
+        border-radius: 41px
+        background-color: #0E0E0E
+        img
+            display: block
+            margin: 0 auto
+
+    &__heading
+        padding: 0 16px
+
+input
+    width: 100%
+    background-color: #0E0E0E
+    height: 43px
+    border-radius: 110px
+    padding: 0 16px
+    font-size: 16px
+    font-weight: 300
+    color: white
+    &::placeholder
+        color: #868686
+
+.subheading
+    font-weight: 600
+    font-size: 29px
+    line-height: 35.35px
+    margin: 0 0 16px
+
+@media screen and ( max-width: 1500px )
+    .container
+        max-width: 1240px
+
+    .btn
+        font-size: 20px
+        line-height: 100%
+        padding: 18px 40px
+        &.--md
+            padding: 11px 20px
+            font-size: 19px
+            line-height: 110%
+
+        img
+            width: 23px
+            height: 20px
+            margin-right: 20px
+
+@media screen and ( max-width: 600px )
+    .subheading
+        font-weight: 600
+        font-size: 21px
+        line-height: 29px
+        margin: 0 0 12px
+
+    .form
+        flex-direction: column
+        .submit
+            width: 100%
+
+    .btn
+        &.--lg
+            padding: 8px 16px 9px
+            font-size: 22px
+            line-height: 32px
+
+
+@media screen and ( max-width: 360px )
+    .container
+        padding: 0 10px
