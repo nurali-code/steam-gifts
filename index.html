@@ -9,57 +9,149 @@
 	<meta name="theme-color" content="#FFC148">
 	<link type="image/svg" rel="shortcut icon" href="./favicon.svg">
 	<link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body>
-
-	<header class="header">
-		<div class="container fx-ac">
-			<a href="#" class="logo"><img src="img/logo.svg" alt="i"></a>
-			<nav class="fx-ac nav">
-				<a href="#" class="nav__link">Главная</a>
-				<a href="#" class="nav__link fx-ac">
-					<span>Поиск</span>
-					<img class="nav__link--img" src="img/search.svg" alt="i">
-				</a>
-				<a href="#" class="nav__link">Пополнение Steam</a>
-
-				<div class="nav-right fx-ac">
+	<main class="hero">
+		<header class="header">
+			<div class="container fx-ac">
+				<a href="#" class="logo"><img src="img/logo.svg" alt="i"></a>
+				<nav class="fx-ac nav">
+					<a href="#" class="nav__link">Главная</a>
 					<a href="#" class="nav__link fx-ac">
-						<span>Баланс</span>
-						<span class="tag">140,99₽</span>
+						<span>Поиск</span>
+						<img class="nav__link--img" src="img/search.svg" alt="i">
 					</a>
-					<a href="#" class="nav__link fx-ac">
-						<span>Регион аккаунта</span>
-						<span class="tag fx-ac fx-jc">
-							<img src="img/ru.png" class="tag-img" alt="i">
-							<span>RU (₽)</span>
-							<img src="img/ar-down.svg" class="tag-ic" alt="i">
-						</span>
-					</a>
-				</div>
-			</nav>
+					<a href="#" class="nav__link">Пополнение Steam</a>
 
-			<nav class="nav-sec fx-ac">
-				<a href="#" class="nav__ic"><img src="img/fav.svg" alt="i"></a>
-				<a href="#" class="nav__ic"><img src="img/cart.svg" alt="i"></a>
-				<div class="user">
-					<button class="user__avatar"><img src="img/user.png" alt="i"></button>
-					<div class="user-menu fx-col">
-						<span class="user__name">steamgifts</span>
-						<span class="user__id">@steamgiftsru</span>
-						<a href="#" class="user__btn fx-ac">
-							<img src="img/lk.svg" alt="i">
-							<span>Личный кабинет</span>
+					<div class="nav-right fx-ac">
+						<a href="#" class="nav__link fx-ac">
+							<span>Баланс</span>
+							<span class="tag">140,99₽</span>
 						</a>
-						<a href="#" class="user__link c-red">Выйти</a>
+						<a href="#" class="nav__link fx-ac">
+							<span>Регион аккаунта</span>
+							<span class="tag fx-ac fx-jc">
+								<img src="img/ru.png" class="tag-img" alt="i">
+								<span>RU (₽)</span>
+								<img src="img/ar-down.svg" class="tag-ic" alt="i">
+							</span>
+						</a>
+					</div>
+				</nav>
+
+				<nav class="nav-sec fx-ac">
+					<a href="#" class="nav__ic"><img src="img/fav.svg" alt="i"></a>
+					<a href="#" class="nav__ic"><img src="img/cart.svg" alt="i"></a>
+					<div class="user">
+						<button class="user__avatar"><img src="img/user.png" alt="i"></button>
+						<div class="user-menu fx-col">
+							<span class="user__name">steamgifts</span>
+							<span class="user__id">@steamgiftsru</span>
+							<a href="#" class="user__btn fx-ac">
+								<img src="img/lk.svg" alt="i">
+								<span>Личный кабинет</span>
+							</a>
+							<a href="#" class="user__link c-red">Выйти</a>
+						</div>
+					</div>
+					<button class="btn__menu"><span></span></button>
+				</nav>
+			</div>
+		</header>
+
+		<div class="container fx-col fx-ac">
+			<div class="hero-content fx-col fx-ac">
+				<h1>Первый магазин игр Steam в Telegram</h1>
+				<div class="fx-ac fx-w hero-brends">
+					<img src="img/ggsell.svg" alt="i">
+					<img src="img/plati.market.svg" alt="i">
+				</div>
+			</div>
+			<div class="fx-ac fx-jc fx-w hero-links">
+				<a href="#" class="btn btn-outline">
+					<img src="img/chat.svg" alt="i">
+					<span>Telegram App</span>
+				</a>
+				<a href="#" class="btn btn-outline">
+					<img src="img/chat.svg" alt="i">
+					<span>Наш канал</span>
+				</a>
+				<a href="#" class="btn btn-outline">
+					<img src="img//chat.svg" alt="i">
+					<span>Общий чат</span>
+				</a>
+
+
+			</div>
+		</div>
+		<img src="img/hero__bg.png" class="hero__bg" alt="i">
+
+	</main>
+
+
+	<section class="service">
+		<div class="container">
+			<h2><a href="#" class="link">Услуги</a></h2>
+			<div class="service-slider fx">
+				<div class="service-slide">
+					<img src="img/serv.png" alt="i" class="service__img">
+					<div class="service-title">
+						<button class="btn__fav" title="Добавть в избранное"></button>
+						<h3 class="service__price fx-ac">
+							<span>2 995 ₽</span>
+							<span class="badge">-25%</span>
+						</h3>
+						<p class="service__text">Подписка+</p>
 					</div>
 				</div>
-				<button class="btn__menu"><span></span></button>
-			</nav>
+				<div class="service-slide">
+					<img src="img/serv.png" alt="i" class="service__img">
+					<div class="service-title">
+						<button class="btn__fav" title="Добавть в избранное"></button>
+						<h3 class="service__price fx-ac">
+							<span>2 995 ₽</span>
+							<span class="badge">-25%</span>
+						</h3>
+						<p class="service__text">Подписка+</p>
+					</div>
+				</div>
+				<div class="service-slide">
+					<img src="img/serv.png" alt="i" class="service__img">
+					<div class="service-title">
+						<button class="btn__fav" title="Добавть в избранное"></button>
+						<h3 class="service__price fx-ac">
+							<span>2 995 ₽</span>
+							<span class="badge">-25%</span>
+						</h3>
+						<p class="service__text">Подписка+</p>
+					</div>
+				</div>
+				<div class="service-slide">
+					<img src="img/serv.png" alt="i" class="service__img">
+					<div class="service-title">
+						<button class="btn__fav" title="Добавть в избранное"></button>
+						<h3 class="service__price fx-ac">
+							<span>2 995 ₽</span>
+							<span class="badge">-25%</span>
+						</h3>
+						<p class="service__text">Подписка+</p>
+					</div>
+				</div>
+				<div class="service-slide">
+					<img src="img/serv.png" alt="i" class="service__img">
+					<div class="service-title">
+						<button class="btn__fav" title="Добавть в избранное"></button>
+						<h3 class="service__price fx-ac">
+							<span>2 995 ₽</span>
+							<span class="badge">-25%</span>
+						</h3>
+						<p class="service__text">Подписка+</p>
+					</div>
+				</div>
+			</div>
 		</div>
-	</header>
+	</section>
 
 	<footer class="footer">
 		<div class="container fx-w fx-as">
@@ -94,6 +186,10 @@
 		</div>
 	</footer>
 
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/slick.min.js"></script>
+	<script src="./js/scripts.js"></script>
 </body>
 
 </html>

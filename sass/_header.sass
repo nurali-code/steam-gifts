@@ -1,6 +1,10 @@
 .header
     padding: 20px 0
     background-color: rgba(24, 24, 24, 0.85)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
     .logo
         display: block
         min-width: 105px
@@ -71,7 +75,7 @@
             margin: 0 13px 0 8px
 
     @media screen and ( max-width: 1200px )
-        position: relative
+        // position: relative
         z-index: 99999
         padding: 15px 0
 
@@ -95,12 +99,12 @@
             transform: translateX(100%)
             &__link
                 display: block
-                padding: 8px !important 
+                padding: 8px !important
                 width: 100%
                 font-size: 14px
                 line-height: 18px
 
-            &__ic 
+            &__ic
                 padding: 12px
 
             &-right
@@ -109,7 +113,6 @@
                 margin: 0 0 16px
                 padding-bottom: 16px
                 border-bottom: 1px solid rgba(white, .1)
-
 
             .btn
                 width: 100%
@@ -120,7 +123,7 @@
                 opacity: 1
                 transform: translateX(0%)
 
-        .tag 
+        .tag
             margin: 0
 
         .user
@@ -224,16 +227,33 @@
             height: 100%
             object-fit: cover
 
+        &:active,
+        &:hover,
+        &:focus
+            & ~ div
+                opacity: 1
+                visibility: visible
+                transform: translateY(0)
+
     &-menu
-        display: none !important
         width: 220px
         padding: 15px 25px
         background: linear-gradient(180deg, #2D2B29 0%, #171716 100%)
         border-radius: 14px
         position: absolute
+        transition: .2s ease all
         top: 100%
-        left: 50%
-        transform: translateX(-50%)
+        right: -20px
+        transform: translateY(5%)
+        opacity: 0
+        visibility: hidden
+        text-align: left
+        &:active,
+        &:hover,
+        &:focus
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
 
     &__name
         font-weight: 600
