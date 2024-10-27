@@ -1,7 +1,9 @@
 @import 'normolize'
 @import 'fonts'
+@import 'slick'
 @import 'elements'
 @import 'header'
+@import 'lk'
 
 .hero
     padding: 90px 0 50px
@@ -48,7 +50,6 @@
             line-height: 120%
 
     @media screen and ( max-width: 720px )
-        padding-top: 76px
         h1
             font-size: 32px
             line-height: 120%
@@ -71,15 +72,18 @@
             gap: 14px
 
 .service
+    overflow: hidden
     &-slider
-        &:not(.slick-initiolized)
+        &:not(.slick-initialized)
             gap: 30px
 
     &-slide
         width: 236px
         max-width: 100%
+        margin: 0 15px
         &:not(.slick-slide)
             display: none
+            margin: 0
             @media screen and ( min-width: 1100px )
                 &:nth-child(1),
                 &:nth-child(2),
@@ -99,8 +103,6 @@
                 &:nth-child(1)
                     display: block
 
-
-
     &__img
         width: 100%
         border-radius: 15px
@@ -110,9 +112,9 @@
         background-color: #fff
 
     &__price
-        color: $prime
+        color: white
         font-size: 24px
-        line-height: 29.26px
+        line-height: 120%
         font-weight: 500
         gap: 9px
         margin: 0 0 2px
@@ -132,6 +134,88 @@
         line-height: 15.85px
         margin: 0
 
+    @media screen and ( max-width: 992px )
+        &-slide
+            margin: 0 10px
+
+        &-slider
+            width: 100vw
+            position: relative
+            left: -15px
+            .slick-list
+                padding: 0 15px
+
     @media screen and ( max-width: 720px )
+        &-slide
+            width: 210px
+            margin: 0 8px
+
+        &__price
+            font-size: 20px
+
+.items
+    @media screen and ( max-width: 992px )
+        &-slider
+            width: 100vw
+            position: relative
+            left: -15px
+            .slick-list
+                padding: 0 15px
+
+.item
+    width: 340px
+    position: relative
+    z-index: 1
+    overflow: hidden
+    border-radius: 18px
+    padding: 20px 30px
+    aspect-ratio: 5/6.03
+    margin: 0 14px
+    &:not(.slick-slide)
+        margin: 0
+
+    &::before
+        content: ''
+        height: 50%
+        background: linear-gradient(358.57deg, #000000 -3.43%, rgba(135, 135, 135, 0) 85.91%)
+    &__img,
+    &::before
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        pointer-events: none
+        z-index: -1
+        display: block
+
+    &__img
+        object-fit: cover
+        height: 100%
+        z-index: -1111
+
+    &__price
+        gap: 10px
+        font-weight: 700
+        font-size: 29.94px
+        line-height: 36.5px
+
+    .badge
+        font-size: 20px
+        line-height: 24.82px
+        padding: 2px 8px
+
+    @media screen and ( max-width: 992px )
+        margin: 0 10px
+
+    @media screen and ( max-width: 720px )
+        width: 290px
+        padding: 16px 22px
+        &__price
+            font-size: 26px
+            line-height: 120%
+
+        .badge
+            font-size: 18px
+            line-height: 115%
 
 @import 'footer'

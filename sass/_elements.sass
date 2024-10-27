@@ -6,7 +6,7 @@
     outline: none
 
 :root
-    --balck: #0E0E0E
+    --balck: #121212
     --gray: #A0A0A0
     --prime: #FFC148
     --red: #FF4242
@@ -29,11 +29,20 @@ body
     &.is_active
         overflow: hidden
 
+h1,h2,h3,h4,h5,h6,p
+    &:last-child
+        margin-bottom: 0
+
 .container
     max-width: 1430px
     width: 100%
     margin: 0 auto
     padding: 0 15px
+
+main
+    padding-top: 90px
+    @media screen and ( max-width: 720px )
+        padding-top: 76px
 
 img
     display: block
@@ -78,9 +87,9 @@ ul
         object-fit: contain
 
     &-outline
-        background-color: rgba(0, 0, 0, 0)
+        background-color: rgba(0, 0, 0, 0) !important
         color: white
-        border: 2px solid $prime
+        border: 1.5px solid $prime
 
     &__fav
         display: inline-block
@@ -91,19 +100,39 @@ ul
         background-size: contain
         background-image: url('../img/heart.svg')
 
+    &.--white
+        background-color: #fff
+        border-color: white
+
 .badge
     display: inline-block
     vertical-align: middle
     color: black
     font-size: 16px
-    line-height: 19px
+    line-height: 120%
     border-radius: 40px
     background-color: $prime
     padding: 2px 6px
     font-weight: 700
+    @media screen and ( max-width: 720px )
+        font-size: 15px
 
-.c-red
-    color: $red !important
+.c
+    &-red
+        color: $red !important
+
+    &-prime
+        color: $prime !important
+
+    &-green
+        color: #41D61C
+
+hr
+    margin: 0
+    display: block
+    width: 100%
+    height: 1px
+    background-color: $prime
 
 .w-100
     width: 100% !important
@@ -111,14 +140,17 @@ ul
 .text-center
     text-align: center !important
 
-.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .fx-js, body
+.fx:not(.slick-initialized), .fx-w, .fx-jc, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .fx-js, body, .fx-je, .tag
     display: flex !important
 
 .fx-col, body
     flex-direction: column
 
-.fx-ac, .btn
+.fx-ac, .btn, .tag
     align-items: center
+
+.fx-jc, .tag
+    justify-content: center
 
 .fx
     &-w
@@ -127,11 +159,11 @@ ul
     &-as
         align-items: flex-start
 
+    &-je
+        justify-content: flex-end
+
     &-js
         justify-content: flex-start
-
-    &-jc
-        justify-content: center
 
     &-jb
         justify-content: space-between
@@ -169,6 +201,33 @@ input
     &::placeholder
         color: #868686
 
+fieldset
+    display: block
+    border: 1.5px solid #4E4E4E
+    border-radius: 8px
+    position: relative
+    z-index: 1
+    margin: 0 0 20px
+    *
+        color: #A0A0A0
+
+    label
+        background-color: #161616
+        font-size: 11px
+        line-height: 120%
+        display: block
+        padding: 0 4px
+        margin: 0
+        position: absolute
+        top: -7px
+        left: 30px
+
+    input
+        padding: 0 26px
+        background: rgba(0, 0, 0, 0)
+        &:focus
+            color: white
+
 .link
     position: relative
     &::after
@@ -190,16 +249,24 @@ input
     .btn
         padding: 9px 14px
 
-@media screen and ( max-width: 720px )
+@media screen and ( max-width: 1000px )
+    .h2, h2
+        font-size: 32px
+        margin: 0 0 25px
+
     .btn
         border-width: 1px
         font-size: 14px
 
+@media screen and ( max-width: 720px )
     h2, .h2
         font-size: 30px
         margin-bottom: 24px
         .link::after
             margin-left: 12px
+
+    section,.section
+        padding: 30px 0
 
 @media screen and ( max-width: 600px )
     .subheading
