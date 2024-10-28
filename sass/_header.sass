@@ -27,6 +27,8 @@
             img
                 display: block
 
+            &:hover
+                opacity: 1
         &__link
             color: $gray
             font-size: 16px
@@ -38,12 +40,12 @@
                 padding-right: 0
 
             &--img
-                width: 24px
-                margin-left: 10px
+                width: 20px
+                margin-left: 8px
 
             &:hover
                 opacity: 1
-                color: rgba(white, 1)
+                color: $prime
 
         &-right
             margin-left: auto
@@ -191,15 +193,14 @@
                 height: 40px
 
 .tag
-    padding: 5px 8px 4px
+    padding: 6px 8px
     border-radius: 25px
     background-color: #2D2D2D
     display: inline-block
     width: fit-content
     min-width: 79px
     color: white
-    font-size: 11.07px
-    line-height: 15px
+    font-size: 14px
     text-align: center
     margin-left: 2px
     &-ic
@@ -222,7 +223,7 @@
     &::before
         content: ''
         display: block
-        width: 7px
+        width: 10px
         height: 10px
         background-repeat: no-repeat
         background-position: center center
@@ -230,7 +231,7 @@
         background-image: url('../img/ar-down.svg')
         position: absolute
         right: 9px
-        top: 8px
+        top: 12px
         z-index: 11
 
     &.is_active
@@ -240,16 +241,16 @@
             transform: scaleY(-1)
 
     &_btn
-        padding-right: 20px
+        padding-right: 24px
         cursor: pointer
-        img 
+        img
             margin-right: 2px
 
     &-content
         display: none
         border: 1px solid #2D2D2D
         overflow: hidden
-        padding: 0 5px 0 5px
+        padding: 0 6px
         border-radius: 12px
         width: 100%
         position: absolute
@@ -257,6 +258,7 @@
         top: 0
         left: 0
         & > *
+            width: 100%
             cursor: pointer
             min-width: unset
             border-radius: 0
@@ -300,6 +302,8 @@
         padding: 3px
         overflow: hidden
         img
+            opacity: 1
+            filter: none !important
             display: block
             width: 100%
             height: 100%
@@ -348,5 +352,10 @@
         margin: 0
 
     &__btn
-        padding: 21px 0
+        padding: 10px 0
+        margin: 10px 0
         gap: 12px
+
+        &:hover
+            opacity: 1
+            color: $prime

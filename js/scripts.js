@@ -2,6 +2,10 @@ $('.btn__menu, .nav__link').on('click', function () {
 	window.innerWidth <= 1200 ? $('.btn__menu, .nav, body').toggleClass('is_active') : false;
 })
 
+$('.btn__fav').on('click', function (e) {
+	$(this).toggleClass('is_active');
+});
+
 $('.ddown_btn').on('click', function (e) {
 	e.stopPropagation();
 	$(this).closest('.ddown').toggleClass('is_active').find('.ddown-content').slideToggle(100);
@@ -20,7 +24,7 @@ $(document).on('click', function (e) {
 });
 
 $('.service-slider').slick({
-	dots: false,
+	dots: true,
 	arrows: false,
 	infinite: false,
 	swipeToSlide: true,
@@ -46,7 +50,7 @@ $('.service-slider').slick({
 });
 
 $('.items-slider').slick({
-	dots: false,
+	dots: true,
 	arrows: false,
 	infinite: false,
 	swipeToSlide: true,
@@ -58,17 +62,15 @@ $('.items-slider').slick({
 	responsive: [
 		{
 			breakpoint: 1500,
-			settings: {
-				slidesToShow: 3,
-				// slidesToScroll: 1,
-			}
+			settings: { slidesToShow: 3, }
 		},
 		{
 			breakpoint: 1200,
-			settings: {
-				slidesToShow: 2,
-				// slidesToScroll: 1,
-			}
+			settings: { slidesToShow: 2, }
+		},
+		{
+			breakpoint: 720,
+			settings: { slidesToShow: 1, }
 		},
 	]
 });

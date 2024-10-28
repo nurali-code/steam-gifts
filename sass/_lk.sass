@@ -150,6 +150,29 @@
             &__text
                 margin-bottom: 10px
 
+    &__headline
+        font-weight: 500
+        font-size: 18px
+        margin: 33px 0 14px
+        &:first-of-type
+            margin-top: 0
+
+    &-list
+        background-color: #242424
+        padding: 0 20px
+        margin-top: 23px
+        border-radius: 12px
+        li
+            padding: 13px 0
+            border-bottom: 1px solid #5A5A5A
+            gap: 10px
+            &:last-child
+                border: none
+
+            & > * 
+                &:last-child
+                    text-align: right
+
     @media screen and ( max-width: 1000px )
         &__heading
             font-size: 34px

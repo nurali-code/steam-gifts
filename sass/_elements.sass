@@ -55,10 +55,23 @@ button
     transition: all ease .3s
     background-color: transparent
     &:hover
-        opacity: .7
+        opacity: .8
+        color: $prime
+        img
+            filter: none !important
+            opacity: 1 !important
+
     &:active
         opacity: 1
         transform: scale(.98)
+
+.fill, .nav__ic
+    img
+        filter: brightness(10)
+        opacity: .7
+
+    &:hover
+        opacity: 1
 
 .h2, h2
     font-size: 39px
@@ -80,16 +93,26 @@ ul
     background-color: $prime
     border-radius: 50px
     text-align: center
+    border: 1.5px solid $prime
     img
         margin: 0 10px 0 0
         max-width: 20px
         max-height: 20px
         object-fit: contain
+        transition: all ease .2s
+        filter: brightness(10)
+
+    &:hover
+        opacity: 1
+        background-color: rgba(0, 0, 0, 0)
+        img
+            filter: none
 
     &-outline
         background-color: rgba(0, 0, 0, 0) !important
         color: white
-        border: 1.5px solid $prime
+        &:hover
+            color: $prime
 
     &__fav
         display: inline-block
@@ -98,11 +121,20 @@ ul
         background-repeat: no-repeat
         background-position: center center
         background-size: contain
-        background-image: url('../img/heart.svg')
+        background-image: url('../img/fav.svg')
+        filter: brightness(10)
+        opacity: .7
+        &.is_active
+            opacity: 1
+            filter: none
 
     &.--white
         background-color: #fff
         border-color: white
+
+.filter-none
+    filter: none !important
+    opacity: 1 !important
 
 .badge
     display: inline-block
@@ -140,14 +172,19 @@ hr
 .text-center
     text-align: center !important
 
-.fx:not(.slick-initialized), .fx-w, .fx-jc, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .fx-js, body, .fx-je, .tag
+.fx:not(.slick-initialized), .fx-w, .fx-jc, .fx-ac,
+.fx-as, .fx-col, .fx-jb, .fx-ae, .fx-js, body, .fx-je, .tag,
+.lk-list li
     display: flex !important
 
 .fx-col, body
     flex-direction: column
 
-.fx-ac, .btn, .tag
+.fx-ac, .btn, .tag, .lk-list li
     align-items: center
+
+.fx-jb, .lk-list li
+    justify-content: space-between
 
 .fx-jc, .tag
     justify-content: center
@@ -164,9 +201,6 @@ hr
 
     &-js
         justify-content: flex-start
-
-    &-jb
-        justify-content: space-between
 
     &-ae
         align-items: end
@@ -191,15 +225,18 @@ section,.section
 
 input
     width: 100%
-    background-color: #0E0E0E
-    height: 43px
+    background-color: #242424
+    height: 35px
     border-radius: 110px
     padding: 0 16px
     font-size: 16px
     font-weight: 300
-    color: white
+    color: #9A9A9A
     &::placeholder
         color: #868686
+
+    &:focus
+        color: white
 
 fieldset
     display: block
@@ -207,7 +244,7 @@ fieldset
     border-radius: 8px
     position: relative
     z-index: 1
-    margin: 0 0 20px
+    margin: 0 0 15px
     *
         color: #A0A0A0
 
@@ -224,9 +261,8 @@ fieldset
 
     input
         padding: 0 26px
+        height: 43px
         background: rgba(0, 0, 0, 0)
-        &:focus
-            color: white
 
 .link
     position: relative
@@ -241,6 +277,69 @@ fieldset
         background-position: center center
         background-size: contain
         background-image: url('../img/ar-right.svg')
+
+.checkbox
+    position: relative
+    z-index: 1
+    label
+        padding-left: 28px
+        font-size: 15px
+        cursor: pointer
+        display: block
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 18px
+            height: 18px
+            border-radius: 5px
+            border: 1px solid #858585
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+
+    input
+        width: 18px
+        height: 18px
+        left: 0
+        top: 0
+        position: absolute
+        opacity: 0
+        &:checked ~ label::before
+            background-image: url('../img/check.svg')
+            background-color: $prime
+            border-color: $prime
+
+.radio
+    position: relative
+    z-index: 1
+    &-wrap
+        gap: 12px
+
+    label
+        cursor: pointer
+        padding: 7px 12px
+        background-color: #242424
+        border-radius: 25px
+        display: block
+
+    img
+        height: 27px
+        object-fit: contain
+        max-width: 115px
+
+    input
+        cursor: pointer
+        opacity: 0 !important
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        &:checked ~ label
+            background-color: #858585
 
 @media screen and ( max-width: 1500px )
     .container
