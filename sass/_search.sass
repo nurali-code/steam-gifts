@@ -1,0 +1,53 @@
+.search
+    &__input
+        height: 60px
+        border-radius: 0
+        background-color: rgba(0, 0, 0, 0)
+        font-size: 30px
+        padding: 0
+        margin: 0 0 20px
+        border-bottom: 1px solid rgba(white, .2)
+        &:focus
+            border-color: $prime
+
+    &-tabs
+        margin: 0 0 20px
+
+    .dinp
+
+    &-togglers
+        gap: 10px 50px
+        label
+            color: $gray
+            border: 1px solid rgba(0, 0, 0, 0)
+
+        input
+            &:checked ~ label
+                color: white
+                background-color: rgba(0, 0, 0, 0)
+                border-color: $prime
+
+    &-items
+        margin-top: 50px
+        gap: 40px 22px
+        & > *
+            width: calc( 20% - 18px )
+
+            @media screen and ( max-width: 1200px )
+                width: calc( 25% - 17px )
+
+            @media screen and ( max-width: 1000px )
+                width: calc( 33.333% - 15px )
+
+            @media screen and ( max-width: 800px )
+                width: calc( 50% - 10px )
+
+    @media screen and ( max-width: 720px )
+        &-togglers
+            gap: 15px
+
+        &-items
+            gap: 20px 10px
+
+        &__input
+            font-size: 20px

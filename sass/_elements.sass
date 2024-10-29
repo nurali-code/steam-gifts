@@ -124,6 +124,8 @@ ul
         background-image: url('../img/fav.svg')
         filter: brightness(10)
         opacity: .7
+        position: relative
+        z-index: 9999
         &.is_active
             opacity: 1
             filter: none
@@ -369,6 +371,9 @@ fieldset
         font-size: 14px
         color: #9A9A9A
 
+    .fx-ac
+        gap: 10px
+
 .radio
     position: relative
     z-index: 1
@@ -397,6 +402,23 @@ fieldset
         left: 0
         &:checked ~ label
             background-color: #858585
+
+    &.--outline
+        input
+            &:checked ~ label
+                border-color: $prime
+
+        label
+            background-color: rgba(0, 0, 0, 0) !important
+            padding: 12px 12px 11px
+            border: 1.5px solid #2F2F2F
+
+    @media screen and ( max-width: 720px )
+        label
+            font-size: 14px
+        &.--outline
+            label
+                padding: 9px 12px 8px
 
 .status
     li

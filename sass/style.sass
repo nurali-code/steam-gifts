@@ -5,6 +5,7 @@
 @import 'header'
 @import 'lk'
 @import 'card'
+@import 'search'
 
 .hero
     padding-bottom: 50px
@@ -87,6 +88,8 @@
 
     &-slide
         width: 236px
+        position: relative
+        z-index: 1
         max-width: 100%
         margin: 0 15px
         &:not(.slick-slide)
@@ -111,6 +114,14 @@
                 &:nth-child(1)
                     display: block
 
+    &__link
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 11
+        height: 100%
+
     &__img
         width: 100%
         border-radius: 15px
@@ -127,15 +138,9 @@
         gap: 9px
         margin: 0 0 2px
 
-    &-title
-        padding-right: 30px
-        position: relative
-        z-index: 1
-
     .btn__fav
-        position: absolute
-        right: 5px
-        top: 5px
+        float: right
+        margin-left: 5px
 
     &__text
         font-size: 13px
@@ -204,7 +209,7 @@
     &__price
         gap: 10px
         font-weight: 700
-        font-size: 29.94px
+        font-size: 26px
         line-height: 36.5px
 
     .badge
@@ -225,5 +230,46 @@
         .badge
             font-size: 18px
             line-height: 115%
+
+.box
+    position: relative
+    z-index: 1
+    &__img
+        display: block
+        width: 100%
+        aspect-ratio: 5/6.03
+        margin: 0 0 14px
+        overflow: hidden
+        border-radius: 18px
+
+    .btn__fav
+        float: right
+        margin-left: 5px
+
+    &__price
+        color: white
+        font-size: 24px
+        line-height: 120%
+        font-weight: 500
+        gap: 9px
+        margin: 0 0 2px
+
+    &__text
+        font-size: 20px
+
+    &__link
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 11
+        height: 100%
+
+    @media screen and ( max-width: 720px )
+        &__price
+            font-size: 18px
+
+        &__text
+            font-size: 14px
 
 @import 'footer'
