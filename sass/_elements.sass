@@ -156,6 +156,8 @@ ul
     &-prime
         color: $prime !important
 
+    &-gray
+        color: #858585
     &-green
         color: #41D61C
 
@@ -311,6 +313,45 @@ fieldset
             background-image: url('../img/check.svg')
             background-color: $prime
             border-color: $prime
+
+.inp
+    position: relative
+    z-index: 1
+    margin: 0 0 30px
+    max-width: 366px
+    &__edit
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        padding: 10px 20px
+        right: 0
+
+    @media screen and ( max-width: 720px )
+        margin: 0 0 25px
+
+.dinp
+    margin: 0 0 10px
+    gap: 12px
+    & > *
+        margin: 0
+
+    .inp
+        width: 120px
+
+    .lk__headline
+        margin-bottom: 10px
+
+    .swap
+        margin-bottom: 9px
+
+    input
+        text-align: center
+        color: white
+        padding: 0 10px
+
+    &__text
+        font-size: 14px
+        color: #9A9A9A
 
 .radio
     position: relative
