@@ -6,6 +6,23 @@ $('.btn__fav').on('click', function (e) {
 	$(this).toggleClass('is_active');
 });
 
+// Отслеживаем изменения в чекбоксе #all
+$('#all').change(function () {
+	if ($(this).is(':checked')) {
+		// Если #all отмечен, снимаем отметку со всех остальных чекбоксов в .search-tabs
+		$('.search-tabs input[type="checkbox"]').not(this).prop('checked', false);
+	}
+});
+
+// Отслеживаем изменения в других чекбоксах внутри .search-tabs
+$('.search-tabs input[type="checkbox"]').not('#all').change(function () {
+	if ($(this).is(':checked')) {
+		// Если отмечен любой чекбокс кроме #all, снимаем отметку с #all
+		$('#all').prop('checked', false);
+	}
+});
+
+
 $('.ddown_btn').on('click', function (e) {
 	e.stopPropagation();
 	$(this).closest('.ddown').toggleClass('is_active').find('.ddown-content').slideToggle(100);
