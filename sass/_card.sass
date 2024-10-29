@@ -4,7 +4,7 @@
     overflow: hidden
     width: calc( 100% - 30px )
     max-width: 810px
-    margin: 70px auto
+    margin: 70px auto 0
     .btn__fav
         float: right
         margin-left: 5px
@@ -20,7 +20,7 @@
             width: calc( 100% + 15px )
             max-height: 520px
             overflow-y: scroll
-            padding-right: 7px
+            padding-right: 10px
             &::-webkit-scrollbar
                 width: 3px
 
@@ -32,6 +32,9 @@
             /* Handle */
             &::-webkit-scrollbar-thumb
                 background: rgba(#858585, .5)
+                border-radius: 10px
+            &::-webkit-scrollbar-thumb:hover
+                background: rgba(#858585, .8)
                 border-radius: 10px
 
     &-img
@@ -64,7 +67,7 @@
             margin: 14px auto 6px
 
     @media screen and ( max-width: 720px )
-        margin: 0 0 50px
+        margin: 0 
         width: 100%
         border-radius: 0
         background-color: rgba(0, 0, 0, 0)
@@ -76,6 +79,7 @@
 
         &-title
             max-width: 100%
+            padding-bottom: 0
 
         &-item
             &__text

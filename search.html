@@ -14,7 +14,10 @@
 <body>
 	<section class="search">
 		<div class="container">
-			<input type="text" class="search__input" placeholder="Введите что-нибудь для поиска...">
+			<div class="fx-ac search-wrap">
+				<input type="text" class="search__input" placeholder="Введите что-нибудь для поиска...">
+				<a href="./index.html" class="btn btn-outline search__btn"><img src="img/close.svg" alt="i"></a>
+			</div>
 
 			<div class="fx-ac fx-w radio-wrap search-tabs">
 				<div class="radio --outline">
@@ -52,42 +55,22 @@
 
 				<div class="dinp">
 					<h3 class="lk__headline">Издатель:</h3>
-					<div class="fx-ac fx-w radio-wrap">
-						<div class="radio">
-							<input type="radio" name="maker">
-							<label>Activision</label>
-						</div>
-						<div class="radio">
-							<input type="radio" checked="" name="maker">
-							<label>Valve</label>
-						</div>
-						<div class="radio">
-							<input type="radio" name="maker">
-							<label>Argentics</label>
-						</div>
-						<div class="radio">
-							<input type="radio" name="maker">
-							<label>Gamepack</label>
-						</div>
-					</div>
+					<select>
+						<option value="Все">Все</option>
+						<option value="Valve">Valve</option>
+						<option value="Argentics">Argentics</option>
+						<option value="Gamepack">Gamepack</option>
+					</select>
 				</div>
 
 				<div class="dinp">
 					<h3 class="lk__headline">Жанр:</h3>
-					<div class="fx-ac fx-w radio-wrap">
-						<div class="radio">
-							<input type="radio" name="janre">
-							<label>Экшн</label>
-						</div>
-						<div class="radio">
-							<input type="radio" checked="" name="janre">
-							<label>Шутеры</label>
-						</div>
-						<div class="radio">
-							<input type="radio" name="janre">
-							<label>Стрелялки</label>
-						</div>
-					</div>
+					<select>
+						<option value="Все">Все</option>
+						<option value="Экшн">Экшн</option>
+						<option value="Шутеры">Шутеры</option>
+						<option value="Стрелялки">Стрелялки</option>
+					</select>
 				</div>
 			</div>
 
@@ -176,7 +159,6 @@
 
 		</div>
 	</section>
-
 
 	<footer class="footer">
 		<div class="container fx-w fx-as">

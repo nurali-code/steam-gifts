@@ -31,12 +31,13 @@
                 opacity: 1
 
         &__link
-            color: $gray
             font-size: 16px
             line-height: 20px
             white-space: nowrap
             padding: 2px 23px 2px
             gap: 8px
+            color: $gray
+
             &:last-of-type
                 padding-right: 0
 
@@ -44,9 +45,10 @@
                 width: 20px
                 margin-left: 8px
 
+        a.nav__link
             &:hover
-                opacity: 1
                 color: $prime
+                opacity: 1
 
         &-right
             margin-left: auto
@@ -282,17 +284,24 @@
     &.--lg
         &::before
             height: 8px
-            width: 9px
-            right: 7px
+            width: 12px
+            right: 11px
             top: 13px
-        .ddwon
-            &__btn
-                padding: 5px 23px 5px 6px
-                font-size: 15px
+
+        .ddown
+            &_btn
+                padding: 5px 30px 5px 7px
+                font-size: 16px
+
+            &_item
+                font-size: 16px
+                padding-right: 25px
+                white-space: nowrap
+
         .tag-img
-            width: 31px
+            width: 30px
             margin-right: 5px
-            height: 24px
+            height: 22px
 
 .user
     position: relative
