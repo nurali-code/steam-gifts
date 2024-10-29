@@ -23,6 +23,10 @@ $(document).on('click', function (e) {
 	}
 });
 
+$('.dropdown-btn').on('click', function () {
+	$(this).toggleClass('is_active').next().slideToggle(300);
+});
+
 $('.service-slider').slick({
 	dots: true,
 	arrows: false,

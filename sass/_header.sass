@@ -221,7 +221,6 @@
 
 .ddown
     position: relative
-    z-index: 1
     width: fit-content
     &::before
         content: ''
@@ -234,8 +233,8 @@
         background-image: url('../img/ar-down.svg')
         position: absolute
         right: 9px
-        top: 12px
-        z-index: 11
+        top: 11px
+        z-index: 111
 
     &.is_active
         .ddown_btn
@@ -260,6 +259,7 @@
         background-color: #272626
         top: 0
         left: 0
+        z-index: 11
         & > *
             width: 100%
             cursor: pointer

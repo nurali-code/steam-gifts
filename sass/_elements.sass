@@ -22,7 +22,6 @@ body
     color: white
     background-color: $black
     font-family: 'Montserrat', sans-serif
-
     position: relative
     z-index: 1
 
@@ -55,7 +54,6 @@ button
     transition: all ease .3s
     background-color: transparent
     &:hover
-        opacity: .8
         color: $prime
         img
             filter: none !important
@@ -78,7 +76,9 @@ button
     line-height: 120%
     margin: 0 0 35px
     .link::after
-        margin-left: 24px
+        width: 9px
+        height: 17px
+        margin: 0 0 0 24px
 
 ul
     list-style: none
@@ -132,6 +132,13 @@ ul
         background-color: #fff
         border-color: white
 
+    &.disabled,
+    &:disabled
+        pointer-events: none
+        background-color: #232323
+        color: $gray
+        border-color: #232323
+
 .filter-none
     filter: none !important
     opacity: 1 !important
@@ -170,6 +177,7 @@ hr
 
 .w-100
     width: 100% !important
+    max-width: 100% !important
 
 .text-center
     text-align: center !important
@@ -272,13 +280,21 @@ fieldset
         content: ''
         display: inline-block
         vertical-align: middle
-        width: 9px
-        height: 17px
-        margin-left: 12px
+        width: 6px
+        height: 12px
+        margin: 0 0 2px 12px
         background-repeat: no-repeat
         background-position: center center
         background-size: contain
         background-image: url('../img/ar-right.svg')
+        transition: opacity ease .3s
+        filter: brightness(3)
+        opacity: .5
+
+    &:hover
+        &::after
+            opacity: 1
+            filter: brightness(1)
 
 .checkbox
     position: relative
@@ -381,6 +397,48 @@ fieldset
         left: 0
         &:checked ~ label
             background-color: #858585
+
+.status
+    li
+        position: relative
+        z-index: 1
+        font-size: 15px
+        padding: 0 0 35px 35px
+        color: $gray
+        &:last-child
+            // padding-bottom: 0
+            &::after
+                display: none
+
+        &::before,
+        &::after
+            content: ''
+            top: 3px
+            position: absolute
+            display: block
+            background-color: $gray
+
+        &::before
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            left: 0
+
+        &::after
+            width: 2px
+            height: 100%
+            left: 5px
+
+        &:not(.active~li)
+            color: $prime
+            &::after,
+            &::before
+                background-color: $prime
+
+    @media screen and ( max-width: 720px )
+        font-size: 13px
+        li
+            padding: 0 0 25px 25px
 
 @media screen and ( max-width: 1500px )
     .container
