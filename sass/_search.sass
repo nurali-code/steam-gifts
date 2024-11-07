@@ -59,3 +59,157 @@
         &__input
             height: 45px
             font-size: 18px
+
+.purchase
+    padding: 40px 0 20px
+    &-wrap
+        gap: 10px
+        overflow-x: scroll
+        padding-bottom: 18px
+        border-radius: 14px
+        &::-webkit-scrollbar
+            width: 5px
+            height: 5px
+
+        &::-webkit-scrollbar-track
+            background-color: rgba(#6A6A6A, .21)
+            border-radius: 10px
+
+        &::-webkit-scrollbar-thumb
+            background-color: #646464
+            border-radius: 10px
+
+    &-item
+        min-width: 129px
+        width: 129px
+        display: block
+        -webkit-border-radius: 14px
+        border-radius: 14px
+        overflow: hidden
+        img
+            display: block
+            width: 100%
+            transition: all ease .3s
+        &:hover
+            opacity: 1
+            transform: scale(0.94)
+            img
+                transform: scale(1.06) rotate(1deg)
+
+.load
+    text-align: center
+    min-height: 320px
+    img
+        display: block
+        margin: 0 auto
+        width: 158px
+        animation: rotate_anim 1.5s linear infinite
+
+    @media screen and ( max-width: 720px )
+        min-height: 280px
+        img
+            width: 120px
+
+.box
+    &-header
+        padding-bottom: 40px
+        margin-bottom: 20px
+        border-bottom: 1px solid rgba(255, 255, 255, .1)
+        .lk__subheading
+            margin-bottom: 10px
+
+    &-col
+        width: 60%
+
+    &-sender
+        width: 39%
+        text-align: center
+
+        img
+            display: block
+            width: 120px
+            height: 120px
+            border-radius: 20px
+            margin: 0 auto 7px
+
+        &__text
+            font-size: 16px
+            margin: 0 0 2px
+
+        &__heading
+            font-size: 18px
+            color: $prime
+            line-height: 24px
+            margin: 0
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+    &-row
+        padding: 25px 0
+
+    @media screen and ( max-width: 720px )
+        &-header
+            flex-direction: column-reverse
+
+        &-sender
+            margin-bottom: 20px
+        &-col,
+        &-sender
+            width: 100%
+            text-align: center
+
+.range
+    height: 15px
+    width: 100%
+    border-radius: 41px
+    background-color: rgba(14, 14, 14, .21)
+    &__item
+        border-radius: 41px
+        background-color: #ffc148
+        display: block
+        width: 0px
+        height: 100%
+        animation: ranger_anim 15s ease-in-out infinite
+
+@keyframes rotate_anim
+    0%
+        transform: rotate(0)
+
+    100%
+        transform: rotate(-360deg)
+
+@keyframes ranger_anim
+    0%
+        width: 3%
+        left: 7px
+        right: auto
+
+    25%
+        left: 7px
+        right: auto
+        width: 100%
+
+    25.01% 
+        width: 100%
+        left: auto
+        right: 7px
+
+    50%
+        left: auto
+        right: 7px
+        width: 3%
+
+    75%
+        left: auto
+        right: 7px
+        width: 100%
+
+    75.01% 
+        left: 7px
+        right: auto
+
+    100%
+        left: 7px
+        right: auto
+        width: 3%

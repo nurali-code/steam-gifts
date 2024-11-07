@@ -1,5 +1,8 @@
 .lk
     min-height: 100vh
+    .container
+        padding-top: 70px
+
     &-container
         width: 100%
 
@@ -27,7 +30,7 @@
                 opacity: 1
 
     &-title
-        padding: 70px 15px
+        padding: 70px 15px 0
         text-align: center
 
     &__heading
@@ -201,10 +204,15 @@
                 background: #858585
                 border-radius: 10px
 
-
             li
                 border: none
                 padding: 8px 0
+
+    &-btns 
+        padding-top: 24px
+        gap: 14px
+        & > * 
+            width: 50%
 
     @media screen and ( max-width: 1000px )
         &__heading
@@ -218,7 +226,7 @@
             width: 240px
 
         &-title
-            padding: 40px 15px
+            padding: 40px 15px 0
 
         &-content
             padding: 20px 30px
@@ -226,6 +234,9 @@
         &__textline
             font-size: 18px
             max-width: 500px
+
+        .container
+            padding-top: 40px
 
     @media screen and ( max-width: 720px )
         &__submit
@@ -284,6 +295,12 @@
         &__headline
             font-size: 16px
             margin: 25px 0 10px
+
+        &-btns 
+            flex-direction: column
+            & > * 
+                width: 100%
+
 
 .dropdown
     &-btn
